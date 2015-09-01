@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.1.7//EN" "http://struts.apache.org/dtds/struts-2.1.7.dtd" >
+<struts>
+	<package name="cuit" extends="struts-default" >
+		<action name="activity_*" class="ActivityAction" method="{1}">
+			
+		</action>
+		<action name="news_*" class="PlayerAction" method="{1}">
+			
+		</action>
+		<action name="player_*" class="PlayerAction" method="{1}">
+			
+		</action>
+	</package>
+	<!-- 常量 -->
+   <!--设置浏览器是否缓存静态内容 (开发阶段最好设为false)，生产阶段可以打开-->
+	<constant name="struts.serve.static.browserCache" value="false"></constant>
+
+	<!--是否允许在action名中	使用"/" - -->
+	<constant name="struts.enable.SlasheslnActionNames" value="true"></constant>
+
+	<!-- 是否启用开发模式 (开发阶段最好设为true)，生产阶段可以关闭-->
+	<constant name="struts.devMode" value="true"></constant>
+
+	<!-- 当HTTP每次到达时，重新加载资源文件 (开发阶段最好设为true)，生产阶段可以关闭 -->
+	<constant name="struts.i18n.reload" value="true"></constant>
+	
+	<!-- 当struts的配置文件修改后,系统是否自动重新加载该文件,默认值为false(生产环境下使用),开发阶段最好打开 -->
+    <constant name="struts.configuration.xml.reload" value="true"/>
+	
+	<!-- 解决struts2的form表单提交乱码(post方式) -->
+	<constant name="struts.i18n.encoding" value="GBK"></constant>
+	
+	<!-- 设置action的后缀名为.do (不写或者写.do)-->
+	<constant name="struts.action.extension" value="do,"></constant>
+	
+	<!-- 配置struts2的国际化资源文件 -->
+    <constant name="struts.custom.i18n.resources" value="applicationMessage"></constant>
+</struts>
